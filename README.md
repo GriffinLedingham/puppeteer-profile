@@ -1,6 +1,6 @@
 # puppeteer-profile
 
-A profiling library for Puppeteer.
+A profiling library for Puppeteer, based on a collection of Puppeteer recipes aggregated by [puppeteer-webperf](https://github.com/addyosmani/puppeteer-webperf).
 
 ```npm i puppeteer-profile```
 
