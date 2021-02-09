@@ -33,9 +33,11 @@ describe('Test', () => {
   
 ```
 
-### API
+## API
 
-- #### page.timings()
+### page.timings()
+
+Prints the Chrome page load timings.
 
 ```javascript
 await page.timings()
@@ -67,9 +69,9 @@ await page.timings()
 }
 ```
 
-Prints the Chrome page load timings.
+### page.profileHeap()
 
-- #### page.profileHeap()
+Prints the current object count in the browser heap. This can be used at various times throughout your Puppeteer tests 
 
 ```javascript
 await page.profileHeap()
@@ -78,5 +80,3 @@ await page.profileHeap()
 ==== Heap Count ====
 Objects: 74332
 ```
-
-Prints the current object count in the browser heap. This can be used at various times throughout your Puppeteer tests 
