@@ -4,7 +4,11 @@ A profiling library for Puppeteer.
 
 ```npm i puppeteer-profile```
 
-## Usage
+## Getting Started
+
+### Usage
+
+Attach the `puppeteer-profile` API to the page object in your test's `beforeAll`.
 
 ```javascript
 const puppeteerProfile = require('puppeteer-profile');
@@ -24,3 +28,21 @@ describe('Test', () => {
 });
   
 ```
+
+### API
+
+#### page.timings()
+
+```javascript
+await page.timings()
+```
+
+Prints the Chrome page load timings.
+
+#### page.profileHeap()
+
+```javascript
+await page.profileHeap()
+```
+
+Prints the current object count in the browser heap. This can be used at various times throughout your Puppeteer tests 
