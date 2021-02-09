@@ -6,7 +6,7 @@ A profiling library for Puppeteer.
 
 ## Usage
 
-```
+```javascript
 const puppeteerProfile = require('puppeteer-profile');
 
 describe('Test', () => {
