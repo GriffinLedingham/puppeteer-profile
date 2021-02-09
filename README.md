@@ -22,15 +22,15 @@ describe('Test', () => {
     // Attach profiling methods to the Puppeteer page object
     page = puppeteerProfile(page);
     await page.goto('http://localhost:8080');
-    
+
     // Output Chrome page load timings
     await page.timings();
-    
+
     // Output Chrome heap object count
     await page.profileHeap();
   });
 });
-  
+
 ```
 
 ## API
@@ -71,7 +71,7 @@ await page.timings()
 
 ### page.profileHeap()
 
-Prints the current object count in the browser heap. This can be used at various times throughout your Puppeteer tests 
+Prints the current object count in the browser heap. This can be used at various times throughout your Puppeteer tests
 
 ```javascript
 await page.profileHeap()
@@ -79,4 +79,30 @@ await page.profileHeap()
 ```
 ==== Heap Count ====
 Objects: 74332
+```
+
+### page.runtimeMetrics()
+
+Prints the Chrome page runtime metrics.
+
+```javascript
+await page.runtimeMetrics()
+```
+```
+==== Metrics ====
+{
+  "Timestamp": 387342.204604,
+  "Documents": 5,
+  "Frames": 4,
+  "JSEventListeners": 894,
+  "Nodes": 31967,
+  "LayoutCount": 132,
+  "RecalcStyleCount": 240,
+  "LayoutDuration": 0.121866,
+  "RecalcStyleDuration": 0.141439,
+  "ScriptDuration": 1.314362,
+  "TaskDuration": 2.327362,
+  "JSHeapUsedSize": 9894336,
+  "JSHeapTotalSize": 15261696
+}
 ```

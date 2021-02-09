@@ -19,6 +19,22 @@ module.exports = (page) => {
     });
   };
 
+  page.runtimeMetrics = function () {
+    const p = new Promise((resolve, reject) => {
+      (async () => {
+        try {
+          const metrics = await page.metrics();
+          resolve(metrics);
+        } catch (e) {
+          reject(e);
+        }
+      })();
+    });
+    return p.then((metrics) => {
+      log('Metrics', metrics);
+    });
+  }
+
   page.profileHeap = function () {
     const p = new Promise((resolve, reject) => {
       (async () => {
