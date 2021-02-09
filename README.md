@@ -2,11 +2,13 @@
 
 A profiling library for Puppeteer, based on a collection of Puppeteer recipes aggregated by [puppeteer-webperf](https://github.com/addyosmani/puppeteer-webperf).
 
+## Getting Started
+
+### Installation
+
 ```
 npm i puppeteer-profile
 ```
-
-## Getting Started
 
 ### Usage
 
