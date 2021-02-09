@@ -31,7 +31,7 @@ describe('Test', () => {
 
 ### API
 
-#### page.timings()
+- #### page.timings()
 
 ```javascript
 await page.timings()
@@ -39,7 +39,7 @@ await page.timings()
 
 Prints the Chrome page load timings.
 
-#### page.profileHeap()
+- #### page.profileHeap()
 
 ```javascript
 await page.profileHeap()
